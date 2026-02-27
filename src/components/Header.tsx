@@ -30,7 +30,7 @@ export default function Header() {
       <Container className="pt-4">
         <div className="flex items-center justify-between rounded-2xl border border-ink/10 bg-cream/60 px-4 py-3 backdrop-blur-md">
           <Link
-            href="/"
+            href="/#testimonials"
             data-cursor="link"
             className="flex items-center gap-3"
             aria-label={BRAND.name}

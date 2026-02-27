@@ -11,6 +11,7 @@ export default function PageTransition({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (reduced) return;
+    if (window.location.hash) return;
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [pathname, reduced]);
 

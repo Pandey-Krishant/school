@@ -71,6 +71,11 @@ body {
   overflow-x: hidden;
 }
 
+/* Anchor offsets for fixed header */
+section[id] {
+  scroll-margin-top: 120px;
+}
+
 /* Webkit scrollbars */
 ::-webkit-scrollbar {
   width: 0px;
