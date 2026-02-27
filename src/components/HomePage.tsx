@@ -1,8 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import Header from "@/components/Header";
-import Preloader from "@/components/Preloader";
 import AboutTrust from "@/components/sections/AboutTrust";
 import ActivitySplit from "@/components/sections/ActivitySplit";
 import ClassroomShowcase from "@/components/sections/ClassroomShowcase";
@@ -15,12 +12,8 @@ import PlayArea from "@/components/sections/PlayArea";
 import Testimonials from "@/components/sections/Testimonials";
 
 export default function HomePage() {
-  const [loaded, setLoaded] = useState(false);
-
   return (
     <>
-      <Preloader onDone={() => setLoaded(true)} />
-      {loaded && <Header />}
       <main className="relative">
         <Hero />
         <AboutTrust />
@@ -36,4 +29,3 @@ export default function HomePage() {
     </>
   );
 }
-

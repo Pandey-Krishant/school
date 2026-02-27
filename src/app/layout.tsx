@@ -4,6 +4,7 @@ import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 import WhatsAppFab from "@/components/WhatsAppFab";
+import AppChrome from "@/components/AppChrome";
 
 const bodyFont = Nunito({
   variable: "--font-body",
@@ -44,7 +45,7 @@ export default function RootLayout({
       >
         <SmoothScroll>
           <CustomCursor />
-          {children}
+          <AppChrome>{children}</AppChrome>
           <WhatsAppFab />
         </SmoothScroll>
       </body>
