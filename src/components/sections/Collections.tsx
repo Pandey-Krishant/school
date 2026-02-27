@@ -91,7 +91,9 @@ export default function Collections() {
         import("gsap"),
         import("gsap/ScrollTrigger"),
       ]);
+      const section = sectionRef.current;
       if (destroyed) return;
+      if (!section) return;
       gsap.registerPlugin(ScrollTrigger);
 
       const cards = Array.from(

@@ -50,7 +50,10 @@ export default function ClassroomShowcase() {
         import("gsap"),
         import("gsap/ScrollTrigger"),
       ]);
+      const section = sectionRef.current;
+      const track = trackRef.current;
       if (destroyed) return;
+      if (!section || !track) return;
       gsap.registerPlugin(ScrollTrigger);
 
       ctx = gsap.context(() => {
@@ -81,7 +84,7 @@ export default function ClassroomShowcase() {
                       duration: { min: 0.15, max: 0.35 },
                       ease: "power2.out",
                     }
-                  : false,
+                  : undefined,
             },
           });
         }

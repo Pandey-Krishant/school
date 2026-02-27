@@ -27,7 +27,9 @@ export default function Hero() {
         import("gsap"),
         import("gsap/ScrollTrigger"),
       ]);
+      const root = rootRef.current;
       if (destroyed) return;
+      if (!root) return;
       gsap.registerPlugin(ScrollTrigger);
 
       ctx = gsap.context(() => {

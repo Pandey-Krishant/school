@@ -25,7 +25,10 @@ export default function PlayArea() {
         import("gsap"),
         import("gsap/ScrollTrigger"),
       ]);
+      const section = sectionRef.current;
+      const overlay = overlayRef.current;
       if (destroyed) return;
+      if (!section || !overlay) return;
       gsap.registerPlugin(ScrollTrigger);
 
       ctx = gsap.context(() => {

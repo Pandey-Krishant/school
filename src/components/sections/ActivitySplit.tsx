@@ -27,7 +27,11 @@ export default function ActivitySplit() {
         import("gsap"),
         import("gsap/ScrollTrigger"),
       ]);
+      const section = sectionRef.current;
+      const img = imageRef.current;
+      const text = textRef.current;
       if (destroyed) return;
+      if (!section || !img || !text) return;
       gsap.registerPlugin(ScrollTrigger);
 
       ctx = gsap.context(() => {

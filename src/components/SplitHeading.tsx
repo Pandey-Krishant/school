@@ -52,7 +52,9 @@ export default function SplitHeading({
         import("gsap"),
         import("gsap/ScrollTrigger"),
       ]);
+      const el = rootRef.current;
       if (destroyed) return;
+      if (!el) return;
       gsap.registerPlugin(ScrollTrigger);
 
       const targets = Array.from(el.querySelectorAll<HTMLElement>(".char"));

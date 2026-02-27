@@ -28,7 +28,11 @@ export default function Preloader({ onDone }: { onDone?: () => void }) {
 
     async function run() {
       const { gsap } = await import("gsap");
+      const root = rootRef.current;
+      const word = wordRef.current;
+      const path = pathRef.current;
       if (destroyed) return;
+      if (!root || !word || !path) return;
 
       const letters = Array.from(word.querySelectorAll<HTMLElement>("[data-letter]"));
 

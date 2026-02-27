@@ -29,6 +29,9 @@ export default function Magnetic({ children, strength = 0.22, className }: Props
 
     async function setup() {
       const { gsap } = await import("gsap");
+      const wrapper = wrapperRef.current;
+      const inner = innerRef.current;
+      if (!wrapper || !inner) return;
       if (destroyed) return;
       quickX = gsap.quickTo(inner, "x", { duration: 0.35, ease: "power3.out" });
       quickY = gsap.quickTo(inner, "y", { duration: 0.35, ease: "power3.out" });
